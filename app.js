@@ -1,6 +1,3 @@
-//List should know about the head (starting value) and the tail (ending value)
-//Element should know about the next one in line
-
 class LinkedList {
     constructor() {
         this.head = null
@@ -32,10 +29,5 @@ class LinkedList {
     }
 }
 
-const linkedList = new LinkedList()
-linkedList.append(1)
-linkedList.append('Deez Nuts')
-linkedList.append(true)
-linkedList.append(1.2345)
 
-console.log(linkedList.toArray())
+
