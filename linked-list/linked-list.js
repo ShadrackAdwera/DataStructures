@@ -107,3 +107,10 @@ console.log(linkedList.find(false))
 linkedList.insertAfter(7, true)
 
 console.log(linkedList.toArray())
+
+//find() method -> O(n)
+//append() method -> O(1)
+//prepend() method -> O(1)
+//delete() 
+//insertAfter() method -> O(1) + Search time
+//Search element -> O(n)
