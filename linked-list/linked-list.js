@@ -17,7 +17,28 @@ class LinkedList {
       this.head = newNode
     }
   }
+
+  prepend(value) {
+    let currNode = { value: value, next: this.head }
+    this.head = currNode
+    if(!this.tail) {
+      this.tail = currNode
+    }
+  }
+
+  toArray() {
+    const elements = []
+    let currElem = this.head
+    while(currElem) {
+      elements.push(currElem)
+      currElem = currElem.next
+    }
+    return elements
+  }
+
+
 }
+
 
 const linkedList = new LinkedList();
 linkedList.append(1);
