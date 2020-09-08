@@ -36,6 +36,26 @@ class LinkedList {
     return elements
   }
 
+  delete(value) {
+    if(!this.head) {
+      return
+    }
+    while(this.head && this.head.value===value) {
+      this.head = this.head.next
+    }
+    let currNode = this.head
+    while(currNode.next) {
+      if(currNode.next.value ===value) {
+        currNode.next = currNode.next.next
+      } else {
+        currNode = currNode.next
+      }
+    }
+    if(this.tail) {
+      this.tail = currNode
+    }
+  }
+
 
 }
 
@@ -44,7 +64,16 @@ const linkedList = new LinkedList();
 linkedList.append(1);
 linkedList.append('Deez Nuts');
 linkedList.append(true);
+linkedList.append(5)
+linkedList.append(5)
 linkedList.append(1.2345);
+linkedList.prepend('First Value')
 linkedList.prepend('First Value')
 
 console.log(linkedList.toArray());
+
+linkedList.delete(5)
+linkedList.delete('First Value')
+linkedList.delete(1)
+
+console.log(linkedList.toArray())
