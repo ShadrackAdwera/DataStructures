@@ -41,6 +41,14 @@ class LinkedList {
     return 'Value not found'
   }
 
+  insertAfter(value, elementAfter) {
+    const existingElement = this.find(elementAfter)
+    if(existingElement) {
+      const newNode = { value: value, next: existingElement.next }
+      existingElement.next = newNode
+    }
+  }
+
   toArray() {
     const elements = []
     let currElem = this.head
@@ -95,3 +103,7 @@ console.log(linkedList.toArray())
 
 console.log(linkedList.find(true))
 console.log(linkedList.find(false))
+
+linkedList.insertAfter(7, true)
+
+console.log(linkedList.toArray())
