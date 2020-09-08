@@ -26,6 +26,21 @@ class LinkedList {
     }
   }
 
+  find(value) {
+    if(!this.head) {
+      return
+    }
+    let currNode = this.head
+
+    while(currNode) {
+      if(currNode.value===value) {
+        return currNode
+      }
+      currNode = currNode.next
+    }
+    return 'Value not found'
+  }
+
   toArray() {
     const elements = []
     let currElem = this.head
@@ -77,3 +92,6 @@ linkedList.delete('First Value')
 linkedList.delete(1)
 
 console.log(linkedList.toArray())
+
+console.log(linkedList.find(true))
+console.log(linkedList.find(false))
