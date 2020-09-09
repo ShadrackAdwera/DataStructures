@@ -16,7 +16,7 @@ const findRepeated = (str) => {
 
 //Time Complexity : O(n^2)
 
-//SOLUTION 2: Using Objects
+//SOLUTION 2: Using Objects / Hashtable
 
 const repeatedChar = (str) => {
     const strObj = {}
@@ -27,5 +27,7 @@ const repeatedChar = (str) => {
         strObj[char] = 1
     }
 }
+
+//Time Complexity : O(n)
 
 console.log(repeatedChar(word))
