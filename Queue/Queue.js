@@ -1,3 +1,5 @@
+//FIFO Data Structure
+
 class Queue {
     constructor() {
         this.items = []
