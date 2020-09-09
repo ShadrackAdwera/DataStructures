@@ -1,7 +1,7 @@
 //List should know about the head (starting value) and the tail (ending value)
 //Element should know about the next one in line
 
-class LinkedList {
+export class LinkedList {
   constructor() {
     this.head = null
     this.tail = null
@@ -23,6 +23,28 @@ class LinkedList {
     this.head = currNode
     if(!this.tail) {
       this.tail = currNode
+    }
+  }
+
+  deleteHead() {
+    if(!this.head) {
+      return 'No element found'
+    }
+    const deletedHead = this.head
+
+    if(this.head.next) {
+      this.head = this.head.next
+    } else {
+      this.head = null
+      this.tail = null
+    }
+
+    return deletedHead
+  }
+
+  isEmpty() {
+    if(!this.head || !this.tail) {
+      return true
     }
   }
 
