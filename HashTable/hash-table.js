@@ -17,5 +17,10 @@ class HashTable {
         this.buckets[keyHash] = value 
     }
 
+    get(key) {
+        const keyHash = this.hash(key)
+        return this.buckets[keyHash]
+    }
+
     
 }
