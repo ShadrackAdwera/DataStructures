@@ -42,19 +42,6 @@ export class LinkedList {
     return deletedHead
   }
 
-  // deleteTail() {
-  //   if(!this.head) {
-  //     return 'list is empty'
-  //   }
-  //   const deletedTail = this.tail
-
-  //   while(this.head.next) {
-  //     this.head = this.head.next
-  //   }
-
-
-  // }
-
   isEmpty() {
     if(!this.head || !this.tail) {
       return true
