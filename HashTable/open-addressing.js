@@ -26,7 +26,15 @@ class HashTable {
 
   get(key) {
     const keyHash = this.hash(key);
-    return this.buckets[keyHash];
+    for(let i = keyHash; i<this.buckets.length; i++) {
+        if(!this.buckets[i]) {
+            continue
+        }
+        if(this.buckets[i].key ===key) {
+            return this.buckets[i].value
+        }
+    }
+    return undefined
   }
 
   showInfo() {
