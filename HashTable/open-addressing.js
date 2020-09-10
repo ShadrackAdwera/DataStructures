@@ -1,3 +1,6 @@
+//Open Addressing strives to find an empty space to add a value in the Hash Table,
+//in doing this no values are overwritten
+
 class HashTable {
   constructor() {
     this.size = 100;
