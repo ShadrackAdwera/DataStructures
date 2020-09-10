@@ -1,5 +1,6 @@
 //Open Addressing strives to find an empty space to add a value in the Hash Table,
-//in doing this no values are overwritten
+//in doing this no values are overwritten. If a key for a certain hash is already present,
+// a new bucket is not taken
 
 class HashTable {
   constructor() {
@@ -17,7 +18,7 @@ class HashTable {
 
   set(key, value) {
     let keyHash = this.hash(key);
-    if (this.buckets[keyHash] === null) {
+    if (this.buckets[keyHash] === null || this.buckets[key].key===key) {
       this.buckets[keyHash] = { key: key, value: value };
     } else {
       while (this.buckets[keyHash] !== null) {
