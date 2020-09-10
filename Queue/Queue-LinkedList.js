@@ -1,4 +1,4 @@
-import { LinkedList } from '../linked-list/linked-list'
+import { LinkedList } from '../LinkedList/linked-list'
 
 class Queue {
     constructor() {

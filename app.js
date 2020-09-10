@@ -20,11 +20,11 @@ const findRepeated = (str) => {
 
 const repeatedChar = (str) => {
     const strObj = {}
-    for(const char of str) {
-        if(strObj[char]) {
-            return char
+    for(const ch of str) {
+        if(strObj[ch]) {
+            return ch
         }
-        strObj[char] = 1
+        strObj[ch] = 1
     }
 }
 
