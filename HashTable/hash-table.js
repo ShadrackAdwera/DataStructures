@@ -10,7 +10,11 @@ class HashTable {
             hash+=val.charCodeAt(0)
         }
         return hash % this.size
+    }
 
+    set(key,value) {
+        const keyHash = this.hash(key)
+        this.buckets[keyHash] = value 
     }
 
     
